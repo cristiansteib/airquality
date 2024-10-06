@@ -1,5 +1,6 @@
 services:
   influxdb2:
+    restart: always
     image: influxdb:2
     ports:
       - 8086:8086
@@ -19,6 +20,7 @@ services:
       - /var/opt/influxdb2/etc:/etc/influxdb2
 
   grafana:
+    restart: always
     image: grafana/grafana
     ports:
       - 3000:3000
